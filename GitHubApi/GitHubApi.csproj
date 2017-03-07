@@ -46,7 +46,8 @@
   <ItemGroup>
     <Compile Include="Data\Common\BaseDataProxy.cs" />
     <Compile Include="Data\Common\LinkedDataList.cs" />
-    <Compile Include="Data\Common\ProxyFactory.cs" />
+    <Compile Include="Data\Factory\IDataProxyFactory.cs" />
+    <Compile Include="Data\Factory\DataProxyFactory.cs" />
     <Compile Include="Data\Repository\GitRepository.cs" />
     <Compile Include="Data\Repository\Repository.cs" />
     <Compile Include="Data\User\GitUser.cs" />

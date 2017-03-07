@@ -50,8 +50,8 @@ namespace GitHubApi
 			var response = dataAccess.SendRequest(request);
 			List<TGitData> gitDataList = JsonConvert.DeserializeObject<List<TGitData>>(response.Body);
 
-			var proxyFactory = new ProxyFactory(this);
-			var repositoryList = gitDataList.Select(x => proxyFactory.CreateProxy<TData, TGitData>(x)).ToList();
+			var proxyFactory = new DataProxyFactory<TGitData>();
+			var repositoryList = gitDataList.Select(x => proxyFactory.CreateProxy<TData>(x, this)).ToList();
 
 			return new LinkedDataList<TData>(repositoryList, Link.ParseLinkHeaderValue(response.LinkHeader));
 		}

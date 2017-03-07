@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 namespace GitHubApi.Data
 {
 	public class LinkedDataList<T>
-		where T: class
 	{
 		public List<T> DataList { get; private set; }
 		public List<Link> LinkList { get; private set; }
