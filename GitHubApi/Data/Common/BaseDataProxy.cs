@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GitHubApi.Data
 {
-	public class BaseDataProxy<TGitData>
+	public abstract class BaseDataProxy<TGitData>
 	{
 		protected IService service;
 		protected TGitData data;
